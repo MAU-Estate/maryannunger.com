@@ -21,7 +21,7 @@ module.exports = {
         defaults: {
           formats: [`auto`, `webp`],
           placeholder: `blurred`,
-          defaultQuality: 50,
+          quality: 50,
           backgroundColor: `transparent`,
         },
       },
@@ -46,7 +46,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-modal-routing-3`,
+    // `gatsby-plugin-modal-routing-3`,
     {
       resolve: 'gatsby-plugin-sanity-image',
       options: {
@@ -81,9 +81,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: 'src/assets/images/favicon.png',
       },
-    },
-    {
-      resolve: `gatsby-plugin-netlify`,
     },
   ],
 }
