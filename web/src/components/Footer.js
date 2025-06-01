@@ -112,30 +112,34 @@ export default function Footer() {
   )
 }
 
-const renderFooterLinks = () => (
-  <>
-    <div className="mb-3 lg:mb-0">
-      <a
-        className="block f-2 hover:underline"
-        href="mailto:estate@maryannunger.com"
-        style={{ textDecorationThickness: '.5px' }}
-      >
-        estate@maryannunger.com
-      </a>
-    </div>
-    <div className="mb-12 lg:mb-0">
-      <a
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        className="block f-2 hover:underline"
-        href="https://instagram.com/maryannungerestate"
-        style={{ textDecorationThickness: '.5px' }}
-      >
-        Join us on Instagram
-      </a>
-    </div>
-    <div className="mb-24 lg:mb-0">
-      <div className="f-2">© 2021 Mary Ann Unger Estate</div>
-    </div>
-  </>
-)
+const renderFooterLinks = () => {
+  const currentDate = new Date()
+  let currentYear = currentDate.getFullYear()
+  return (
+    <>
+      <div className="mb-3 lg:mb-0">
+        <a
+          className="block f-2 hover:underline"
+          href="mailto:estate@maryannunger.com"
+          style={{ textDecorationThickness: '.5px' }}
+        >
+          estate@maryannunger.com
+        </a>
+      </div>
+      <div className="mb-12 lg:mb-0">
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="block f-2 hover:underline"
+          href="https://instagram.com/maryannungerestate"
+          style={{ textDecorationThickness: '.5px' }}
+        >
+          Join us on Instagram
+        </a>
+      </div>
+      <div className="mb-24 lg:mb-0">
+        <div className="f-2">© {currentYear} Mary Ann Unger Estate</div>
+      </div>
+    </>
+  )
+}
