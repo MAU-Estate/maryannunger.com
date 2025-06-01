@@ -1,4 +1,4 @@
-import { IoPerson } from 'react-icons/io'
+import { IoPerson } from 'react-icons/io5'
 
 export default {
   name: 'fellow',
@@ -10,39 +10,39 @@ export default {
       name: 'title',
       title: `Fellow's Name`,
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'year',
       title: 'Year',
       type: 'date',
       options: {
-        dateFormat: 'YYYY'
+        dateFormat: 'YYYY',
       },
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'avatar',
       type: 'image',
       title: `Fellow's headshot image`,
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'education',
       title: 'Education',
       type: 'richText',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'body',
       title: 'Body',
       type: 'richText',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'infoBody',
       title: 'Additional Info',
-      type: 'richText'
-    }
-  ]
+      type: 'richText',
+    },
+  ],
 }

@@ -1,5 +1,4 @@
 import { BsNewspaper } from 'react-icons/bs'
-import ConditionalField from 'sanity-plugin-conditional-field'
 
 export default {
   name: 'article',
@@ -11,20 +10,20 @@ export default {
       name: 'title',
       title: 'Articles name',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'previewImage',
       title: 'Preview Image',
       type: 'previewImage',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'external',
       title: 'Is this article external?',
       type: 'boolean',
       validation: Rule => Rule.required(),
-      initialValue: true
+      initialValue: true,
     },
     {
       name: 'media',
@@ -32,28 +31,22 @@ export default {
       type: 'array',
       of: [
         { type: 'image' },
-        { type: 'file', title: 'PDF', options: { accept: '.pdf' } }
+        { type: 'file', title: 'PDF', options: { accept: '.pdf' } },
       ],
-      inputComponent: ConditionalField,
-      options: {
-        condition: document => !document.external
-      },
+      hidden: ({ document }) => !document?.external,
       validation: Rule =>
         Rule.custom((content, context) => {
           if (context.document.external || content?.length) return true
           else {
             return 'You must add an image or PDF'
           }
-        }).length(1)
+        }).length(1),
     },
     {
       name: 'url',
       title: 'External Url',
       type: 'url',
-      inputComponent: ConditionalField,
-      options: {
-        condition: document => document.external
-      },
+      hidden: ({ document }) => document?.external,
       validation: Rule =>
         Rule.custom((content, context) => {
           if (!context.document.external) return true
@@ -62,19 +55,19 @@ export default {
           } else {
             return true
           }
-        })
+        }),
     },
     {
       name: 'author',
       title: 'Author',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'publication',
       title: 'Publication',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'date',
@@ -83,9 +76,9 @@ export default {
       description:
         'Year & month will be displayed but all will be used for ordering',
       options: {
-        dateFormat: 'MM-DD-YYYY'
+        dateFormat: 'MM-DD-YYYY',
       },
-      validation: Rule => Rule.required()
-    }
-  ]
+      validation: Rule => Rule.required(),
+    },
+  ],
 }

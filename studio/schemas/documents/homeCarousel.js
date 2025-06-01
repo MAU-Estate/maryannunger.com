@@ -10,7 +10,7 @@ export default {
       type: 'array',
       layout: 'grid',
       of: [{ type: 'slide' }, { type: 'newsSlide' }],
-      validation: Rule => Rule.required().min(1)
-    }
-  ]
+      validation: Rule => Rule.required().min(1),
+    },
+  ],
 }

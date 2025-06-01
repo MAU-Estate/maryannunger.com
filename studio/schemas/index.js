@@ -1,15 +1,9 @@
-// First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
-
-// Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
-
 // document schemas
 import siteSettings from './documents/siteSettings'
 // import mainNav from './documents/navigation';
 
 // Page schemas
-import bio from './pages/bio/'
+import bio from './pages/bio'
 import {
   bioSection1,
   bioSection2,
@@ -18,7 +12,7 @@ import {
   bioSection5,
   bioSection6,
   bioSection7,
-  bioCta
+  bioCta,
 } from './pages/bio/bio_objects'
 
 import cv from './pages/cv'
@@ -47,11 +41,11 @@ import twoColImage from './objects/twoColImage'
 import collection from './documents/collection'
 import fellow from './documents/fellow'
 import galleries from './documents/gallery'
-import project from './documents/project/'
+import project from './documents/project'
 import {
   projectCollections,
   projectMaterials,
-  projectMediums
+  projectMediums,
 } from './documents/project/objects'
 import medium from './documents/medium'
 import material from './documents/material'
@@ -62,55 +56,52 @@ import newsSlide from './objects/newsSlide'
 import richSection from './objects/richSection'
 import slide from './objects/slide'
 
-export default createSchema({
-  name: 'maue',
-  types: schemaTypes.concat([
-    bodyPortableText,
-    bio,
-    bioSection1,
-    bioSection2,
-    bioSection3,
-    bioSection4,
-    bioSection5,
-    bioSection6,
-    bioSection7,
-    bioCta,
-    cv,
-    contact,
-    exhibitions,
-    fellowships,
-    press,
-    work,
-    homeCarousel,
-    // components
-    newsSlide,
-    slide,
-    caption,
-    seo,
-    galleryObj,
-    richText,
-    richTextSingle,
-    blockquote,
-    textColumn,
-    textColumns,
-    figure,
-    previewImage,
-    richSection,
-    address,
-    twoColImage,
-    // documents
-    article,
-    collection,
-    exhibition,
-    fellow,
-    galleries,
-    material,
-    // mainNav,
-    medium,
-    project,
-    projectMaterials,
-    projectMediums,
-    projectCollections,
-    siteSettings
-  ])
-})
+export default [
+  bodyPortableText,
+  bio,
+  bioSection1,
+  bioSection2,
+  bioSection3,
+  bioSection4,
+  bioSection5,
+  bioSection6,
+  bioSection7,
+  bioCta,
+  cv,
+  contact,
+  exhibitions,
+  fellowships,
+  press,
+  work,
+  homeCarousel,
+  // components
+  newsSlide,
+  slide,
+  caption,
+  seo,
+  galleryObj,
+  richText,
+  richTextSingle,
+  blockquote,
+  textColumn,
+  textColumns,
+  figure,
+  previewImage,
+  richSection,
+  address,
+  twoColImage,
+  // documents
+  article,
+  collection,
+  exhibition,
+  fellow,
+  galleries,
+  material,
+  // mainNav,
+  medium,
+  project,
+  projectMaterials,
+  projectMediums,
+  projectCollections,
+  siteSettings,
+]

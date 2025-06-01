@@ -1,16 +1,10 @@
-import React from 'react'
-
-const SerifStyle = props => (
-  <span style={{ fontFamily: 'times new roman' }}>{props.children}</span>
-)
-
 export default {
   name: 'richTextSingle',
   title: 'Rich Text',
   type: 'object',
   options: {
     collapsible: true,
-    collapsed: true
+    collapsed: true,
   },
   fields: [
     {
@@ -23,10 +17,10 @@ export default {
           lists: [],
           styles: [],
           marks: {
-            decorators: [{ title: 'Emphasis', value: 'em' }]
-          }
-        }
-      ]
-    }
-  ]
+            decorators: [{ title: 'Emphasis', value: 'em' }],
+          },
+        },
+      ],
+    },
+  ],
 }
