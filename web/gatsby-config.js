@@ -21,7 +21,7 @@ module.exports = {
         defaults: {
           formats: [`auto`, `webp`],
           placeholder: `blurred`,
-          quality: 50,
+          quality: 65,
           backgroundColor: `transparent`,
         },
       },
@@ -53,8 +53,8 @@ module.exports = {
         ...clientConfig.sanity,
         customImageTypes: ['SanityPreviewImage', 'SanityFigure', 'SanitySlide'],
         defaultImageConfig: {
-          quality: 35,
-          maxWidth: 1000,
+          quality: 65,
+          maxWidth: 1250,
           fit: 'clip',
           auto: 'format',
         },
