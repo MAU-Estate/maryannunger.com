@@ -23,7 +23,7 @@ export default function Menu({ bgImage, menuBgClass, onMenuToggle, isOpen }) {
 
   const handleOnMenuToggle = useCallback(
     (value = !isOpen) => onMenuToggle(value),
-    [onMenuToggle, isOpen]
+    [onMenuToggle, isOpen],
   )
 
   useEffect(() => {
@@ -95,6 +95,7 @@ export default function Menu({ bgImage, menuBgClass, onMenuToggle, isOpen }) {
           </nav>
           <div className="left-0 top-0 bottom-0 right-0 absolute flex">
             <SanityImage
+              loading="eager"
               {...bgImage}
               style={{
                 width: '100%',
